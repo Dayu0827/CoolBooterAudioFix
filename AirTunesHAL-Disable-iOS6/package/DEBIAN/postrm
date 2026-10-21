@@ -1,0 +1,40 @@
+#!/bin/sh
+# Restore the plugin after package removal/purge. Never overwrite an existing path.
+
+HAL_DIR="/Library/Audio/Plug-Ins/HAL"
+ORIGINAL="$HAL_DIR/AirTunesHAL.pdev"
+BACKUP="$HAL_DIR/AirTunesHAL.pdev.bak"
+
+case "${1:-}" in
+    remove|purge)
+        ;;
+    *)
+        # In particular, do not restore during package upgrades.
+        exit 0
+        ;;
+esac
+
+if [ -d "$BACKUP" ]; then
+    if [ -e "$ORIGINAL" ]; then
+        echo "AirTunesHAL Disable: WARNING: original path already exists; backup was left untouched." >&2
+        echo "Move or compare these paths manually before restoring: $ORIGINAL and $BACKUP" >&2
+        exit 0
+    fi
+    if mv "$BACKUP" "$ORIGINAL"; then
+        echo "AirTunesHAL Disable: original plugin restored to $ORIGINAL."
+        echo "A full reboot is required to reload the plugin."
+        exit 0
+    fi
+    echo "AirTunesHAL Disable: WARNING: automatic restore failed; backup remains at $BACKUP." >&2
+    echo "Restore manually after checking the destination path and filesystem permissions." >&2
+    # Do not strand dpkg in a half-removed state solely because restore failed.
+    exit 0
+fi
+
+if [ -d "$ORIGINAL" ]; then
+    echo "AirTunesHAL Disable: original plugin is already present; nothing to restore."
+else
+    echo "AirTunesHAL Disable: WARNING: neither original nor backup plugin directory exists." >&2
+    echo "Check the plugin paths manually before rebooting." >&2
+fi
+exit 0
