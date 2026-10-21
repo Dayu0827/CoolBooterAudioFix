@@ -1,0 +1,16 @@
+Origin: Dayu Zou
+Label: Dayu Zou Cydia Repository
+Suite: stable
+Codename: stable
+Architectures: iphoneos-arm
+Components: main
+Description: Personal Cydia repository for legacy iOS packages
+Date: Wed, 21 Oct 2026 19:06:48 +0000
+
+MD5Sum:
+ 1678df7c1e906ef4b7be2baca9e9a0d0              692 Packages
+ dd2e961365fe3b2eec779e556437fab1              465 Packages.gz
+
+SHA256:
+ 37c0aeb9021e4567f0e33471f0ed1fdcd62c7f8b18be3e7d8c00bdcdec38ba3b              692 Packages
+ 4986eb31d5133bb0a95f5d353e63c99f257b7168e4ddd9efbd5b42bf0bfc6a8e              465 Packages.gz
