@@ -1,10 +1,13 @@
-# 安装、卸载与恢复说明
+# CoolBooterAudioFix：安装、卸载与恢复说明
 
 作者：Dayu Zou  
-软件包：`org.dayuzou.airtuneshall-disable`  
-版本：`1.0.1`
+软件名称：`CoolBooterAudioFix`  
+软件包标识符：`org.dayuzou.airtuneshall-disable`  
+版本：`1.0.2`
 
 ## 功能
+
+**Description:** Fixes music stuttering and lag on CoolBooter iOS 6 setups by disabling the broken AirPlay HAL plugin to bypass sandbox write locks.
 
 安装时将：
 
@@ -39,14 +42,19 @@ bash scripts/mac/build_deb.sh
 bash scripts/mac/verify_deb.sh
 ```
 
-生成的 DEB 位于 `release/`，并会复制到 `repo/debs/`。1.0.1 构建脚本强制使用 gzip（`control.tar.gz`、`data.tar.gz`），以兼容缺少 `xz` 解压程序的旧版 iOS 6 环境；
+生成的 DEB 位于 `release/`，并会复制到 `repo/debs/`。构建脚本强制使用 gzip（`control.tar.gz`、`data.tar.gz`），以兼容缺少 `xz` 解压程序的旧版 iOS 6 环境；不要重新发布旧的 1.0.0 xz 压缩包。
 
+## 从 Cydia 安装
 
+把 `repo/` 目录中的**所有内容**复制到一个单独的公开 GitHub 仓库根目录，启用 GitHub Pages（`main` 分支、`/(root)`）。Pages 部署成功后，在 Cydia 的 Manage → Sources → Edit → Add 中添加：
 
+`https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPO_NAME/`
+
+把占位符替换成自己的 GitHub 用户名和仓库名。
 
 ## 卸载与恢复
 
-1. 在 Cydia 中卸载本软件包。
+1. 在 Cydia 中卸载 `CoolBooterAudioFix`。
 2. 检查 `/Library/Audio/Plug-Ins/HAL/AirTunesHAL.pdev` 是否恢复。
 3. 确认恢复成功后再重启。
 

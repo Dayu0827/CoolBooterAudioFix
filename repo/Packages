@@ -1,16 +1,16 @@
 Package: org.dayuzou.airtuneshall-disable
-Version: 1.0.1
+Version: 1.0.2
 Architecture: iphoneos-arm
 Maintainer: Dayu Zou
 Depends: firmware (>= 6.0), firmware (<< 7.0)
-Filename: debs/org.dayuzou.airtuneshall-disable_1.0.1_iphoneos-arm.deb
+Filename: debs/org.dayuzou.airtuneshall-disable_1.0.2_iphoneos-arm.deb
 Size: 1602
-MD5sum: 704a97f311ea2c20028aea681f37ac26
-SHA1: f409ca3d87342eb1ee8b068b0add25f617eb29f6
-SHA256: 20ea7df4ad8c228026d4d3537ceb78ea70ad93102070241e5b50b9e339ab7278
+MD5sum: abb0990a8e648ba34732ef952c57ade6
+SHA1: b0389d0929ac471fb0648fa667eb9723cbdde351
+SHA256: 6066a51a57ecea403600a0690fe75595da15c440dfd74a917f6f764302950ae5
 Section: System
 Priority: optional
-Description: Reversibly disables AirTunesHAL by renaming its plugin directory. This removes AirPlay output support and requires a reboot. Removing this package attempts to restore the original plugin directory.
+Description: Fixes music stuttering and lag on CoolBooter iOS 6 setups by disabling the broken AirPlay HAL plugin to bypass sandbox write locks.
 Author: Dayu Zou
-Name: Disable AirTunesHAL (iOS 6)
+Name: CoolBooterAudioFix
 

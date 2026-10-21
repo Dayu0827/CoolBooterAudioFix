@@ -18,27 +18,27 @@ esac
 
 if [ -d "$BACKUP" ]; then
     if [ -e "$ORIGINAL" ]; then
-        echo "AirTunesHAL Disable: ERROR: both original and backup exist; refusing to overwrite either." >&2
+        echo "CoolBooterAudioFix: ERROR: both original and backup exist; refusing to overwrite either." >&2
         echo "Original: $ORIGINAL" >&2
         echo "Backup:   $BACKUP" >&2
         exit 1
     fi
-    echo "AirTunesHAL Disable: plugin is already disabled; backup preserved at $BACKUP."
-    echo "AirTunesHAL Disable: reboot iOS to ensure the change takes effect."
+    echo "CoolBooterAudioFix: plugin is already disabled; backup preserved at $BACKUP."
+    echo "CoolBooterAudioFix: reboot iOS to ensure the change takes effect."
     exit 0
 fi
 
 if [ ! -d "$ORIGINAL" ]; then
-    echo "AirTunesHAL Disable: ERROR: expected plugin directory was not found: $ORIGINAL" >&2
+    echo "CoolBooterAudioFix: ERROR: expected plugin directory was not found: $ORIGINAL" >&2
     echo "No files were changed. Check the iOS version and plugin path." >&2
     exit 1
 fi
 
 if ! mv "$ORIGINAL" "$BACKUP"; then
-    echo "AirTunesHAL Disable: ERROR: could not move plugin to backup." >&2
+    echo "CoolBooterAudioFix: ERROR: could not move plugin to backup." >&2
     exit 1
 fi
 
-echo "AirTunesHAL Disable: plugin disabled. Backup preserved at $BACKUP."
-echo "AirTunesHAL Disable: a full reboot is required. No automatic reboot was attempted."
+echo "CoolBooterAudioFix: plugin disabled. Backup preserved at $BACKUP."
+echo "CoolBooterAudioFix: a full reboot is required. No automatic reboot was attempted."
 exit 0

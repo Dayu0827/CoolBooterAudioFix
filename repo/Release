@@ -5,12 +5,12 @@ Codename: stable
 Architectures: iphoneos-arm
 Components: main
 Description: Personal Cydia repository for legacy iOS packages
-Date: Wed, 21 Oct 2026 19:06:48 +0000
+Date: Wed, 21 Oct 2026 19:47:29 +0000
 
 MD5Sum:
- 1678df7c1e906ef4b7be2baca9e9a0d0              692 Packages
- dd2e961365fe3b2eec779e556437fab1              465 Packages.gz
+ 75e9259fc9427979c9a6f5fd8cafa901              617 Packages
+ 5d1b7eb8420596d42f1d13c95b443f30              435 Packages.gz
 
 SHA256:
- 37c0aeb9021e4567f0e33471f0ed1fdcd62c7f8b18be3e7d8c00bdcdec38ba3b              692 Packages
- 4986eb31d5133bb0a95f5d353e63c99f257b7168e4ddd9efbd5b42bf0bfc6a8e              465 Packages.gz
+ 731563818a2f2fe01e5fa7852c6a64e35e5ee65c4622cf1b5be5bb04c9478447              617 Packages
+ c4019657c577ebaaf183e1228874aa810cfb880a561ca67753746c10f14bdda9              435 Packages.gz

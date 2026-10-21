@@ -1,12 +1,12 @@
-# AirTunesHAL Disable for iOS 6 (CoolBooterAudioFix)
-
+# CoolBooterAudioFix
 
 **Author:** Dayu Zou  
+**Package display name:** `CoolBooterAudioFix`  
 **Package ID:** `org.dayuzou.airtuneshall-disable`  
-**Version:** `1.0.1`  
+**Version:** `1.0.2`  
 **Target architecture:** `iphoneos-arm`
 
-Fixes the music stutter/lag glitch on CoolBooter dualbooted iOS 6 setups.
+**Description:** Fixes music stuttering and lag on CoolBooter iOS 6 setups by disabling the broken AirPlay HAL plugin to bypass sandbox write locks.
 
 A small, reversible Cydia package for jailbroken iOS 6 devices. It does not inject code or modify `mediaserverd`. On installation, it renames:
 
@@ -42,7 +42,7 @@ Then from this project's root directory:
 bash scripts/mac/build_deb.sh
 ```
 
-The built package is written to `release/org.dayuzou.airtuneshall-disable_1.0.1_iphoneos-arm.deb` and copied to `repo/debs/`. The build explicitly uses `control.tar.gz` and `data.tar.gz` (gzip), because the target iOS 6 environment reported that the `xz` executable was unavailable. The build script removes older copies of this package from the release and repository folders before building, so the known-incompatible 1.0.0 archive is not accidentally published. Repository indexes are regenerated when `dpkg-scanpackages` is available.
+The built package is written to `release/org.dayuzou.airtuneshall-disable_1.0.2_iphoneos-arm.deb` and copied to `repo/debs/`. The build explicitly uses `control.tar.gz` and `data.tar.gz` (gzip), because the target iOS 6 environment reported that the `xz` executable was unavailable. The build script removes older copies of this package from the release and repository folders before building, so the known-incompatible 1.0.0 archive is not accidentally published. Repository indexes are regenerated when `dpkg-scanpackages` is available.
 
 ## Test package metadata
 
@@ -50,10 +50,9 @@ The built package is written to `release/org.dayuzou.airtuneshall-disable_1.0.1_
 bash scripts/mac/verify_deb.sh
 ```
 
-
 ## Uninstall / rollback
 
-1. In Cydia, remove `Disable AirTunesHAL (iOS 6)`.
+1. In Cydia, remove `CoolBooterAudioFix`.
 2. Check that `/Library/Audio/Plug-Ins/HAL/AirTunesHAL.pdev` has been restored.
 3. Reboot iOS 6.1.3.
 
