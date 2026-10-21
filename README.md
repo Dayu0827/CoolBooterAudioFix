@@ -1,9 +1,12 @@
-# AirTunesHAL Disable for iOS 6
+# AirTunesHAL Disable for iOS 6 (CoolBooterAudioFix)
+
 
 **Author:** Dayu Zou  
 **Package ID:** `org.dayuzou.airtuneshall-disable`  
 **Version:** `1.0.1`  
 **Target architecture:** `iphoneos-arm`
+
+Fixes the music stutter/lag glitch on CoolBooter dualbooted iOS 6 setups.
 
 A small, reversible Cydia package for jailbroken iOS 6 devices. It does not inject code or modify `mediaserverd`. On installation, it renames:
 
@@ -47,16 +50,6 @@ The built package is written to `release/org.dayuzou.airtuneshall-disable_1.0.1_
 bash scripts/mac/verify_deb.sh
 ```
 
-## Prepare a GitHub Pages Cydia source
-
-1. Create a separate public GitHub repository, for example `dayuzou-cydia-repo`.
-2. Copy the **contents of the `repo/` directory** (not the outer project folder) into the root of that repository.
-3. Commit and push to the `main` branch.
-4. In GitHub, open **Settings → Pages**. Set the source to **Deploy from a branch**, branch `main`, folder `/ (root)`, and save.
-5. After Pages has deployed, the source URL is `https://YOUR_GITHUB_USERNAME.github.io/dayuzou-cydia-repo/`.
-6. In Cydia, open **Manage → Sources → Edit → Add**, then enter that URL.
-
-Replace the example repository name and username with your actual GitHub values. GitHub Pages hosting is static; run `scripts/mac/update_repo.sh` and push the changed `Packages`, `Packages.gz`, and `Release` files each time a package changes.
 
 ## Uninstall / rollback
 
