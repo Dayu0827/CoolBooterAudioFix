@@ -3,12 +3,12 @@
 **Author:** Dayu Zou  
 **Package display name:** `CoolBooterAudioFix`  
 **Package ID:** `org.dayuzou.airtuneshall-disable`  
-**Version:** `1.0.2`  
+**Version:** `1.0.3-beta`  
 **Target architecture:** `iphoneos-arm`
 
-**Description:** Fixes music stuttering and lag on CoolBooter iOS 6 setups by disabling the broken AirPlay HAL plugin to bypass sandbox write locks.
+**Description:** Fixes music stuttering and lag on CoolBooter iOS 6&7 setups by disabling the broken AirPlay HAL plugin to bypass sandbox write locks.
 
-A small, reversible Cydia package for jailbroken iOS 6 devices. It does not inject code or modify `mediaserverd`. On installation, it renames:
+A small, reversible Cydia package for jailbroken iOS 6&7 devices. It does not inject code or modify `mediaserverd`. On installation, it renames:
 
 `/Library/Audio/Plug-Ins/HAL/AirTunesHAL.pdev`
 
